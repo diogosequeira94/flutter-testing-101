@@ -1,10 +1,12 @@
 # flutter_testing_101
 
-Flutter testing App 1-0-1
+Flutter testing App 1-0-1, from Jorge Coca's course on Caster.IO
 
 ## Getting Started
 
-Glossary:
+Check Glossary for different testing types
+
+## Unit tests 
 
 setUpAll(() => print('Runs BEFORE any test is executed'));
 
