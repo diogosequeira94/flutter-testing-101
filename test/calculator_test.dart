@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_testing_101/calculator.dart';
 import 'package:test/test.dart';
 import 'dart:ui';
@@ -23,6 +24,11 @@ void main(){
       final calculator = Calculator();
       final result = calculator.add(2, 2);
       expect(result, isA<double>());
+    });
+
+    test('the calculator throws an ArgumentError when dividing by zero', (){
+      final calculator = Calculator();
+      expect(() => calculator.divide(2, 0), throwsArgumentError);
     });
   });
   //Matcher class will wrap in equals
