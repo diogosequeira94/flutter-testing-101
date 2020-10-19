@@ -41,6 +41,20 @@ void main(){
     test('the calculator throws an ArgumentError when dividing by zero', (){
       expect(() => calculator.divide(2, 0), throwsArgumentError);
     });
+    
+    //Testing a Future
+    test('calculator returns Future of power of 9, result 81 ', () async {
+      expect(await calculator.powerOfTwo(9), 81);
+    });
+
+    //Testing a Stream
+    group('Testing Streams', () {
+      test('Testing stream of Pi', () {
+        final piValues = [3, 3.1, 3.14, 3.141, 3.1415];
+        expect(calculator.pi(),
+            emitsInOrder(piValues));
+      });
+    });
   });
   //Matcher class will wrap in equals
   //TypeMatcher && StreamMatcher
