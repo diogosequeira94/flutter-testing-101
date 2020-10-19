@@ -5,6 +5,12 @@ import 'dart:ui';
 
 void main(){
 
+  Calculator calculator;
+
+  setUp((){
+    calculator = Calculator();
+  });
+
   group('calculator', () {
     test('the calculator returns 4 when adding 2 and 2', (){
       // 1st step: setup -> create the calculator object
@@ -21,13 +27,11 @@ void main(){
     });
 
     test('The calculator returns a double when adding 2 and 2', () {
-      final calculator = Calculator();
       final result = calculator.add(2, 2);
       expect(result, isA<double>());
     });
 
     test('the calculator throws an ArgumentError when dividing by zero', (){
-      final calculator = Calculator();
       expect(() => calculator.divide(2, 0), throwsArgumentError);
     });
   });
