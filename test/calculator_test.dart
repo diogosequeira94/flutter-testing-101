@@ -1,7 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_testing_101/calculator.dart';
 import 'package:test/test.dart';
 import 'dart:ui';
+
+/// This class is used as an example for Jorge Coca's Testing Tutorial
+/// For more info about the comment sections,
+/// please check README.MD
+
 
 void main(){
 
@@ -22,15 +26,18 @@ void main(){
       //A test without expectation is a bad practice!
     });
 
+    //Testing with Matcher
     test('Calculator creates a non-null object', (){
       expect(Calculator(), isNotNull);
     });
 
+    //Testing with TypeMatcher
     test('The calculator returns a double when adding 2 and 2', () {
       final result = calculator.add(2, 2);
       expect(result, isA<double>());
     });
 
+    //Testing when a function throws an Exception
     test('the calculator throws an ArgumentError when dividing by zero', (){
       expect(() => calculator.divide(2, 0), throwsArgumentError);
     });
