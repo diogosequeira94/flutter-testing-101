@@ -16,8 +16,6 @@ after installing LCOV:
 
 4 - don't forget to add the folder to .gitignore before pushing :)
 
-Check Glossary for different testing types
-
 ## Unit tests 
 
 setUpAll(() => print('Runs BEFORE any test is executed'));
