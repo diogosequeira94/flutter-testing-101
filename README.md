@@ -29,3 +29,17 @@ Flutter test package provides ways to find our widgets,
 we can find them on screen using <b>[Key]</b>, <b>[findByType]</b> or <b>[text]</b> in case of knowing the exact test.
 
 <b>[WidgetTester]</b> testWidgets method provides a callback that gives us a instance of a object, we can interact with the widget we have inflated with the <b>[pumpWidget]</b>
+
+## Expectation 
+
+The most important piece of a test is expectation part, in here we compare the result of the code vs a predefined expectation, if they match the test passes.
+
+<b>[findsNWidgets]</b> -> Asserts there are N widgets in a class or screen.
+
+<b>[findsOneWidget]</b> -> Asserts there is <u>exactly</u> one.
+
+<b>[findNothing]</b> -> Well... 
+
+## Testing small widgets in Isolation
+
+
