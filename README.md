@@ -1,8 +1,17 @@
 # flutter_testing_101
 
-Flutter testing App 1-0-1, from Jorge Coca's course on Caster.IO
+Flutter testing App 1-0-1, from Jorge Coca's presentation.
 
 ## Getting Started
+
+How to Run tests:
+
+after installing LCOV:
+
+1 - flutter test --coverage -> it will generate a coverage file with lcov.info
+2 - genhtml ./coverage/lcov.info --o coverage -> Run it in Bash and it will generate a bunch of files
+3 - start coverage/index.html
+4 - don't forget to add the folder to .gitignore before pushing :)
 
 Check Glossary for different testing types
 
@@ -40,6 +49,18 @@ The most important piece of a test is expectation part, in here we compare the r
 
 <b>[findNothing]</b> -> Well... 
 
-## Testing small widgets in Isolation
+## Mockito
 
+You can control the behavior of your dependencies.
 
+when(calculator.add(3,1)).thenReturn(25);
+
+if we want to test an throwed exception, we just replace .<u>thenReturn</u> for <u>thenThrow</u>
+
+when(calculator.divide(3,0)).thenThrow(Exception());
+
+if we want asynchronous test we can use <b>[thenAnswer]</b>
+
+Testing streams: 
+
+https://caster.io/lessons/lesson-20-stubbing-asynchronous-methods-using-mockito?course_id=75
