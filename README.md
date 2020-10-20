@@ -9,8 +9,11 @@ How to Run tests:
 after installing LCOV:
 
 1 - flutter test --coverage -> it will generate a coverage file with lcov.info
+
 2 - genhtml ./coverage/lcov.info --o coverage -> Run it in Bash and it will generate a bunch of files
+
 3 - start coverage/index.html
+
 4 - don't forget to add the folder to .gitignore before pushing :)
 
 Check Glossary for different testing types
