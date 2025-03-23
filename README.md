@@ -1,6 +1,6 @@
 # flutter_testing_101
 
-Flutter testing App 1-0-1, from Jorge Coca's presentation.
+Flutter testing App 1-0-1
 
 ## Getting Started
 
